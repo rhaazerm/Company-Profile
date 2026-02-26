@@ -23,7 +23,7 @@ a {
 .box-login{
     width: 350px;
     min-height: 270px;
-    border: 2px dotted #e22f2f;  
+    border: 2px solid #8384a0;
     /* solid=garis lurus, kalo dotted=garis putis-putus */
     background-color: #ffffff;
     padding: 15px;
@@ -35,7 +35,7 @@ a {
     margin-bottom: 15px;
 }
 
-.input.control {
+.input-control {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -49,3 +49,6 @@ a {
     border: none;
     cursor: pointer;
 }
+
+/* ================= REGISTER PAGE ================= */
+

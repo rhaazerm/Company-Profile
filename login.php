@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Login</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 
 </head>
 <body id="bg-login">
@@ -12,9 +13,9 @@
         <h2>Login</h2>
         <form action="proses_login.php" method="POST">
             <input type="text" name="user" placeholder="Username" class="input-control">
-            <input type="password" name="pass" placeholder="Password" class="input-control">
-            <input type="submit" name="submit" value="Login" class="btn">
-            <label>Belum Punya Akun? <a href="register.php">Klik di sini untuk Mendaftar</a></label>
+            <input type="password" name="pass" placeholder="Password" class="input-control"><br>
+            <input type="submit" name="submit" value="Login" class="btn"><br>
+            <label>Belum Punya Akun? <a href="register.php"><strong>Klik di sini untuk Mendaftar</strong></a></label>
         </form>
 
         <?php
@@ -23,13 +24,14 @@
                 $username = $_POST['user'];
                 $password = $_POST['pass'];
 
-                $sql = mysqli_query($conn, "SELECT * FROM tb_admin WHERE username='$username' AND pasword='password'")
-                or die(mysqli_error());
+                $sql = mysqli_query($conn, "SELECT * FROM tb_admin WHERE username='$username' AND password='$password'")
+                or die(mysql_error());
 
                 if(mysqli_num_rows($sql) == 0){
-                    echo "<script>alert('Username / Password Salah')</script>";
+                    echo "<script>alert('Username / Password Salah!')</script>";
                     echo '<script type="text/javascript">window.location = "login.php"</script>';
                 }else{
+
                     session_start();
 
                     $row = mysqli_fetch_assoc($sql);
@@ -56,6 +58,6 @@
         ?>
 
     </div>
-    
+
 </body>
 </html>
