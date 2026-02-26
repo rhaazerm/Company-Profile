@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+
 </head>
 <body id="bg-login">
     <div class="box-login">
@@ -12,7 +14,7 @@
             <input type="text" name="user" placeholder="Username" class="input-control">
             <input type="password" name="pass" placeholder="Password" class="input-control">
             <input type="submit" name="submit" value="Login" class="btn">
-            <label>Belum Punya Akun? <a href="#">Klik di sini untuk Mendaftar</a></label>
+            <label>Belum Punya Akun? <a href="register.php">Klik di sini untuk Mendaftar</a></label>
         </form>
 
         <?php

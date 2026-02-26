@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Quicksand, sans-serif;
+}
+
+body {
+    background-color: #494aa1;
+}
+
+a {
+    text-decoration: none;
+    color: #494aa1;
+}
+
+#bg-login {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-login{
+    width: 350px;
+    min-height: 270px;
+    border: 2px dotted #e22f2f;  
+    /* solid=garis lurus, kalo dotted=garis putis-putus */
+    background-color: #ffffff;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.box-login h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.input.control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.btn {
+    padding: 8px 20px;
+    background-color: #494aa1;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
