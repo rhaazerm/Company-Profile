@@ -4,7 +4,7 @@ session_start();
 if (!isset($_SESSION['id_login']) || (trim($_SESSION['id_login']) == '')) { ?>
 <script>
 alert('Silakan Login Terlebih Dahulu')
-window.location = "../";
+window.location = "../login.php";
 </script>
 <?php
 }
