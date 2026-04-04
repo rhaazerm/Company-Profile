@@ -1,12 +1,14 @@
-<?php include ('session.php'); ?>
+<?php include('session.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warung Serbaguna</title>
     <link rel="stylesheet" type="text/css" href="../css/styleadmin.css">
 </head>
+
 <body>
     <div class="wrapper">
         <div class="header"></div>
@@ -20,10 +22,11 @@
         <div class="section">
             <div class="container">
                 <?php
-                $query = mysqli_query($conn, "SELECT * FROM tb_admin WHERE admin_id='".$session_id ['id_login']."'"); 
+                $query = mysqli_query($conn, "SELECT * FROM tb_admin WHERE admin_id='" . $_SESSION['id_login'] . "'");
                 $d = mysqli_fetch_object($query);
+
                 ?>
-                <form id = "contact" action="" method="post">
+                <form id="contact" action="" method="post">
                     <h3>Profile Admin</h3>
                     <fieldset>
                         <input type="text" name="nama" placeholder="Nama Lengkap" class="form-control" value="<?php echo $d->admin_name ?>" required>
@@ -64,8 +67,9 @@
                 ?>
 
                 <?php
-                    $query = mysqli_query($conn, "SELECT * FROM tb_admin WHERE admin_id='".$session_id ['id_login']."'");
-                    $d = mysqli_fetch_object($query);
+                $query = mysqli_query($conn, "SELECT * FROM tb_admin WHERE admin_id='" . $_SESSION['id_login'] . "'");
+                $d = mysqli_fetch_object($query);
+
                 ?>
                 <form id="contact" action="" method="post">
                     <h3>Ubah Password</h3>
@@ -101,4 +105,5 @@
             </div>
         </div>
 </body>
+
 </html>
