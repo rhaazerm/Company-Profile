@@ -50,7 +50,7 @@
                 <?php
                 if (isset($_POST['submit'])) {
                     $nama = ucwords($_POST['nama']);
-                    $user = $_POST['user'];
+                    $user = $_POST['username'];
                     $hp = $_POST['hp'];
                     $email = $_POST['email'];
                     $alamat = ucwords($_POST['alamat']);
