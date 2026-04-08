@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SehatKita Company</title>
+    <title>SehatKita</title>
     <link rel="stylesheet" type="text/css" href="../css/styleadmin.css">
 </head>
 
@@ -13,11 +13,12 @@
     <div class="wrapper">
         <div class="header"></div>
         <div class="sidebar">
-            <div class="sidebar-title"><b>SehatKita Company</b></div>
+            <div class="sidebar-title"><b>SehatKita</b></div>
             <ul>
                 <?php include 'sidebar.php'; ?>
             </ul>
         </div>
+
 
         <div class="section">
             <div class="container">
@@ -29,22 +30,28 @@
                 <form id="contact" action="" method="post">
                     <h3>Profile Admin</h3>
                     <fieldset>
-                        <input type="text" name="nama" placeholder="Nama Lengkap" class="form-control" value="<?php echo $d->admin_name ?>" required>
+                        <input type="text" name="nama" placeholder="Nama Lengkap" class="form-control"
+                            value="<?php echo $d->admin_name ?>" required>
                     </fieldset>
                     <fieldset>
-                        <input type="text" name="username" placeholder="Username" class="form-control" value="<?php echo $d->username ?>" required>
+                        <input type="text" name="username" placeholder="Username" class="form-control"
+                            value="<?php echo $d->username ?>" required>
                     </fieldset>
                     <fieldset>
-                        <input type="text" name="hp" placeholder="No Hp" class="form-control" value="<?php echo $d->admin_telp ?>" required>
+                        <input type="text" name="hp" placeholder="No Hp" class="form-control"
+                            value="<?php echo $d->admin_telp ?>" required>
                     </fieldset>
                     <fieldset>
-                        <input type="text" name="email" placeholder="Email" class="form-control" value="<?php echo $d->admin_email ?>" required>
+                        <input type="text" name="email" placeholder="Email" class="form-control"
+                            value="<?php echo $d->admin_email ?>" required>
                     </fieldset>
                     <fieldset>
-                        <input type="text" name="alamat" placeholder="Alamat" class="form-control" value="<?php echo $d->admin_address ?>" required>
+                        <input type="text" name="alamat" placeholder="Alamat" class="form-control"
+                            value="<?php echo $d->admin_address ?>" required>
                     </fieldset>
                     <fieldset>
-                        <button name="submit" type="submit" id="contact-submit" data-submit="Sending...">Ubah Profil</button>
+                        <button name="submit" type="submit" id="contact-submit" data-submit="Sending...">Ubah
+                            Profil</button>
                     </fieldset>
                 </form>
                 <?php
@@ -77,10 +84,12 @@
                         <input type="password" name="pass1" placeholder="Password Baru" class="form-control" required>
                     </fieldset>
                     <fieldset>
-                        <input type="password" name="pass2" placeholder="Konfirmasi Password Baru" class="form-control" required>
+                        <input type="password" name="pass2" placeholder="Konfirmasi Password Baru" class="form-control"
+                            required>
                     </fieldset>
                     <fieldset>
-                        <button name="ubah_password" type="submit" id="contact-submit" data-submit="Sending...">Ubah Password</button>
+                        <button name="ubah_password" type="submit" id="contact-submit" data-submit="Sending...">Ubah
+                            Password</button>
                     </fieldset>
                 </form>
                 <?php
