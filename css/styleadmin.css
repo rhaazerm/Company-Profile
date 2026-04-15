@@ -58,7 +58,9 @@ body {
   text-decoration: none;
   background: #f4f9ff;
   font-weight: 700;
-  transition: background 0.25s ease, transform 0.25s ease;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
 }
 
 .sidebar ul li a:hover,
@@ -171,11 +173,15 @@ select {
   background: #f6fbff;
   color: #163248;
   font-size: 16px;
+  line-height: 1.5;
   outline: none;
-  padding: 16px 18px;
+  padding: 18px 20px;
   border-radius: 14px;
   margin-bottom: 18px;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+  min-height: 56px;
 }
 
 input[type='text']:focus,
@@ -214,7 +220,9 @@ button {
   border-radius: 16px;
   cursor: pointer;
   box-shadow: 0 14px 30px rgba(32, 103, 255, 0.22);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   margin-bottom: 10px;
 }
 
@@ -300,4 +308,3 @@ label.light {
     padding: 14px 18px;
   }
 }
-
