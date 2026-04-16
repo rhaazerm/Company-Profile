@@ -22,7 +22,7 @@
 
         <div class="section">
             <h5 class="card-title">Kategori Data</h5>
-            <p><a href="kategori_tambah.php">+Tambah Data</a></p>
+            <button class="tambah-data" onclick="window.location.href='kategori_tambah.php'">Tambah Data</button>
             <table class="table1" width="100%">
                 <tr>
                     <th>No</th>
