@@ -21,7 +21,7 @@
         </div>
 
         <div class="section">
-            <h2>Selamat Datang di Dashboard Admin : <?php echo $user_row['admin_name']; ?></h2>
+            <h2>Haloo! Selamat Datang Admin 🤗✌️ : <?php echo $user_row['admin_name']; ?></h2>
         </div>
     </div>
 </body>

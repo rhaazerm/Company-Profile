@@ -21,15 +21,15 @@
         </div>
 
         <div class="section">
-            <h5 class="card-title">Produk Data</h5>
+            <h3 class="card-title">Produk</h3>
             <button class="tambah-data" onclick="window.location.href='produk_tambah.php'">Tambah Data</button>
             <table class="table1" width="100%">
                 <tr>
                     <th>No</th>
                     <th>Kategori</th>
                     <th>Nama Produk</th>
+                    <th>Detail Produk</th>
                     <th>Harga</th>
-                    <th>Detail</th>
                     <th>Gambar</th>
                     <th>Status</th>
                     <th>Aksi</th>
@@ -46,21 +46,22 @@
                             <td><?php echo $no++; ?></td>
                             <td><?php echo $row['category_name']; ?></td>
                             <td><?php echo $row['product_name']; ?></td>
-                            <td><?php echo $row['product_price']; ?></td>
                             <td><?php echo $row['product_description']; ?></td>
-                            <td><img src="../images/<?php echo $row['product_image']; ?>" alt="" width="100"></td>
-                            <td><?php echo $row['product_status'] == 0 ? 'Aktif' : 'Tidak Aktif'; ?></td>
+                            <td>Rp. <?php echo number_format($row['product_price']) ?></td>
+                            <td><a href="produk/<?php echo $row['product_image'] ?>" target="_blank"> <img
+                                        src="../produk/<?php echo $row['product_image'] ?>" width="50px"> </a></td>
+                            <td><?php echo ($row['product_status'] == 0) ? 'Tidak Aktif' : 'Aktif'; ?></td>
 
                             <td>
                                 <a href="produk_edit.php?id=<?php echo $row['product_id']; ?>">Edit</a> |
                                 <a href="hapus_proses.php?idp=<?php echo $row['product_id']; ?>"
-                                    onclick="return confirm('Apakah Anda yakin ingin menghapus produk ini?')">Hapus</a>
+                                    onclick="return confirm('Yakin ingin hapus?')">Hapus</a>
                             </td>
                         </tr>
                     <?php }
                 } else { ?>
                     <tr>
-                        <td colspan="3">Tidak ada data</td>
+                        <td colspan="7">Tidak ada data</td>
                     </tr>
                 <?php } ?>
 
