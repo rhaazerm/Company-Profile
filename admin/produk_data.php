@@ -48,8 +48,7 @@
                             <td><?php echo $row['product_name']; ?></td>
                             <td><?php echo $row['product_description']; ?></td>
                             <td>Rp. <?php echo number_format($row['product_price']) ?></td>
-                            <td><a href="produk/<?php echo $row['product_image'] ?>" target="_blank"> <img
-                                        src="../produk/<?php echo $row['product_image'] ?>" width="50px"> </a></td>
+                            <td><img src="../produk/<?php echo $row['product_image'] ?>" width="50px" class="image-zoom"></td>
                             <td><?php echo ($row['product_status'] == 0) ? 'Tidak Aktif' : 'Aktif'; ?></td>
 
                             <td>
