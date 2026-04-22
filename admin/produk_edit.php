@@ -74,7 +74,7 @@
                     <fieldset>
                         <label>Status</label>
                         <select class="form-control" name="status">
-                            <option value="">--Pilih--</option>
+                            <option value="1">--Pilih--</option>
                             <option value="1" <?php echo $p->product_status == '1' ? 'selected' : '' ?>>Aktif </option>
                             <option value="0" <?php echo $p->product_status == '0' ? 'selected' : '' ?>>Tidak Aktif
                             </option>
@@ -127,7 +127,14 @@
 
                     }
                     // query update data produk
-                    $update = mysqli_query($conn, "UPDATE tb_product SET category_id='" . $kategori . "', product_name='" . $nama . "', product_price='" . $harga . "', product_description='" . $deskripsi . "', product_image='" . $newgambar . "', product_status=" . $status . " WHERE product_id=" . $p->product_id);
+                    $update = mysqli_query($conn, "UPDATE tb_product SET
+                                                        category_id = '" . $kategori . "',
+                                                        product_name = '" . $nama . "',
+                                                        product_price = '" . $harga . "',
+                                                        product_description = '" . $deskripsi . "',
+                                                        product_image = '" . $newgambar . "',
+                                                        product_status = '" . $status . "'
+                                                        WHERE product_id = '" . $p->product_id . "' ");
 
                     if ($update) {
                         echo '<script>alert("Ubah data berhasil")</script>';

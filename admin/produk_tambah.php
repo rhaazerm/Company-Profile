@@ -68,7 +68,7 @@
                     <fieldset>
                         <label>Status</label>
                         <select class="form-control" name="status">
-                            <option value="">--Pilih--</option>
+                            <option value="1">--Pilih--</option>
                             <option value="1">Aktif</option>
                             <option value="0">Tidak Aktif</option>
                         </select>
