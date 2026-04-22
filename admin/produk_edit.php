@@ -30,7 +30,7 @@
                 $p = mysqli_fetch_object($produk);
                 ?>
 
-                <form action="" method="post">
+                <form action="" method="post" enctype="multipart/form-data">
                     <h3>Edit Data Produk</h3>
                     <fieldset>
                         <label>Nama Kategori</label>
@@ -68,7 +68,7 @@
 
                     <fieldset>
                         <label>Deskripsi Produk</label>
-                        <textarea class="form-control" name="deskripsi" placeholder="...Deskripsi Produk..."><?php echo $p->product_description; ?></textarea>
+                        <textarea class="form-control" name="deskripsi" value="<?php echo $p->product_description ?> placeholder="...Deskripsi Produk..."><?php echo $p->product_description; ?></textarea>
                      </fieldset>
                    
                     <fieldset>
@@ -104,7 +104,7 @@
                     if ($filename != '') {
 
                         $type1 = explode('.', $filename);
-                        $type2 = strtolower(end($type1));
+                        $type2 = $type1[1];
 
                         $newname = 'produk' . time() . '.' . $type2;
 
@@ -118,16 +118,16 @@
                         } else {
                             unlink('../produk/' . $foto);
                             move_uploaded_file($tmp_name, '../produk/' . $newname);
-                            $namagambar = $newname;
+                            $newgambar = $newname;
                         }
 
                     } else {
                         // jika admin tidak ganti gambar
-                        $namagambar = $foto;
+                        $newgambar = $foto;
 
                     }
                     // query update data produk
-                    $update = mysqli_query($conn, "UPDATE tb_product SET category_id='" . $kategori . "', product_name='" . $nama . "', product_price='" . $harga . "', product_description='" . $deskripsi . "', product_image='" . $namagambar . "', product_status=" . $status . " WHERE product_id=" . $p->product_id);
+                    $update = mysqli_query($conn, "UPDATE tb_product SET category_id='" . $kategori . "', product_name='" . $nama . "', product_price='" . $harga . "', product_description='" . $deskripsi . "', product_image='" . $newgambar . "', product_status=" . $status . " WHERE product_id=" . $p->product_id);
 
                     if ($update) {
                         echo '<script>alert("Ubah data berhasil")</script>';
