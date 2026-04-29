@@ -32,7 +32,7 @@
 
                 <form action="" method="post" enctype="multipart/form-data">
                     <h3>Edit Data Produk</h3>
-                    <fieldset>
+                    <fieldset> <!-- fieldset digunakan untuk mengelompokkan beberapa elemen dalam sebuah form -->
                         <label>Nama Kategori</label>
                         <select class="form-control" name="kategori" required>
                             <option value="">--Pilih--</option>
@@ -69,8 +69,7 @@
                     <fieldset>
                         <label>Deskripsi Produk</label>
                         <textarea class="form-control" name="deskripsi" value="<?php echo $p->product_description ?> placeholder="...Deskripsi Produk..."><?php echo $p->product_description; ?></textarea>
-                     </fieldset>
-                   
+                    </fieldset>
                     <fieldset>
                         <label>Status</label>
                         <select class="form-control" name="status">
